@@ -1,0 +1,151 @@
+@import '../../assets/scss/main.scss';
+
+.fixedNavBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+header {
+  .nav {
+    background-color: #f4f4f4;
+    padding: 27px 0;
+
+    &Row {
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+
+      &__left {
+        display: flex;
+        flex-direction: row;
+        column-gap: 25px;
+        align-items: center;
+
+        &Menu {
+          display: none;
+        }
+
+        &Logo {
+          color: #1a1a1a;
+          font-size: 40px;
+          font-weight: 700;
+        }
+      }
+
+      &__right {
+        display: flex;
+        flex-direction: row;
+        column-gap: 50px;
+
+        &Avatar {
+          img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+          }
+        }
+
+        &Btns {
+          display: flex;
+          flex-direction: row;
+          column-gap: 30px;
+
+          &__item {
+            border: 1px solid #964b00;
+            border-radius: 11px;
+            padding: 5px 20px;
+
+            color: #1a1a1a;
+            font-size: 22px;
+            font-weight: 700;
+          }
+        }
+
+        &List {
+          display: flex;
+          flex-direction: row;
+          column-gap: 30px;
+
+          &__item {
+            display: flex;
+            flex-direction: row;
+            column-gap: 8px;
+            align-items: center;
+
+            color: #1a1a1a;
+            font-size: 22px;
+            font-weight: 400;
+            cursor: pointer;
+
+            a {
+              color: #1a1a1a;
+            }
+          }
+        }
+
+        &Btn {
+          background-color: #964b00;
+          border-radius: 11px;
+          padding: 5px 20px;
+
+          color: #fff;
+          font-size: 22px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  header {
+    .nav {
+      &Row {
+        &__right {
+          &Btns {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  header {
+    .nav {
+      &Row {
+        &__left {
+          &Menu {
+            display: block;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+          }
+
+          &Logo {
+            font-size: 24px;
+          }
+        }
+
+        &__right {
+          &Avatar {
+            img {
+              width: 29px;
+              height: 29px;
+            }
+          }
+
+          &List {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
