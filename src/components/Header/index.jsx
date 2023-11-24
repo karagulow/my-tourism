@@ -14,6 +14,10 @@ export const Header = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
+  menuOpen
+    ? (document.body.style.overflow = 'hidden')
+    : (document.body.style.overflow = 'auto');
+
   return (
     <header>
       <nav className={`${styles.nav} ${styles.fixedNavBar}`}>
