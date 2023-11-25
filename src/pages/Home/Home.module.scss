@@ -1,0 +1,426 @@
+@import '../../assets/scss/main.scss';
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  &Line {
+    border-bottom: 1px solid #964b00;
+    margin-bottom: 80px;
+  }
+
+  &Header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 65px;
+    margin-bottom: 80px;
+    align-items: center;
+
+    &__title {
+      color: #1a1a1a;
+      font-size: 54px;
+      font-weight: 700;
+      max-width: 1133px;
+    }
+
+    &__search {
+      display: flex;
+      flex-direction: row;
+      column-gap: 78px;
+      justify-content: space-between;
+      border-radius: 15px;
+      background-color: #f4f4f4;
+      box-shadow: 0px 11.54204px 21.92987px -5.77102px rgba(0, 0, 0, 0.25);
+      width: 100%;
+      padding: 29px 25px;
+
+      &Input {
+        border-radius: 15px;
+        background: #9d9d9d;
+        width: 100%;
+        height: 96px;
+        padding: 30px 22px;
+
+        color: #fff;
+        font-size: 32px;
+        font-weight: 400;
+
+        &::placeholder {
+          color: #fff;
+        }
+      }
+
+      &Btn {
+        border-radius: 15px;
+        background-color: #964b00;
+        height: 96px;
+        padding: 30px 79px;
+
+        color: #fff;
+        font-size: 32px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &Advantages {
+    display: flex;
+    flex-direction: column;
+    row-gap: 65px;
+    margin-bottom: 176px;
+
+    &__title {
+      color: #1a1a1a;
+      font-size: 40px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 50px;
+      grid-row-gap: 50px;
+
+      &Item {
+        display: flex;
+        flex-direction: row;
+        column-gap: 19px;
+        align-items: start;
+
+        border-radius: 17px;
+        background: #fff;
+        box-shadow: 0px 11.54204px 21.92987px -5.77102px rgba(0, 0, 0, 0.25);
+        padding: 38px 26px;
+
+        svg {
+          min-width: 45px;
+          min-height: 47px;
+        }
+
+        &__right {
+          display: flex;
+          flex-direction: column;
+          row-gap: 15px;
+
+          &Title {
+            color: #000;
+            font-size: 24px;
+            font-weight: 700;
+          }
+
+          &Text {
+            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  &Tours {
+    display: flex;
+    flex-direction: column;
+    row-gap: 115px;
+    margin-bottom: 80px;
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+      row-gap: 67px;
+
+      &Title {
+        color: #1a1a1a;
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      &List {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+
+        &__item {
+          img {
+            border-radius: 20px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  &Steps {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+    margin-bottom: 85px;
+
+    &__title {
+      color: #1a1a1a;
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+      justify-content: space-between;
+
+      &Item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 35px;
+        width: 257px;
+        text-align: center;
+
+        &__number {
+          display: flex;
+          margin: 0 auto;
+          justify-content: center;
+          align-items: center;
+          width: 126px;
+          height: 126px;
+          border-radius: 50%;
+          background-color: #964b00;
+          box-shadow: 0px 11.54204px 21.92987px -5.77102px rgba(0, 0, 0, 0.25);
+
+          color: #fff;
+          font-size: 60px;
+          font-weight: 700;
+        }
+
+        &__text {
+          color: #1a1a1a;
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  &Region {
+    &__list {
+      display: flex;
+      flex-direction: row;
+      column-gap: 35px;
+      justify-content: space-between;
+
+      &Item {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background-color: #964b00;
+        border-radius: 30px;
+        width: 174px;
+        height: 232px;
+        padding: 10px;
+
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .content {
+    &Region {
+      position: relative;
+      margin-bottom: 200px;
+
+      &__list {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        left: 0;
+        overflow-x: scroll;
+        width: 100%;
+
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .content {
+    &Advantages {
+      &__list {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    &Tours {
+      &__block {
+        &List {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .content {
+    &Advantages {
+      &__list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    &Tours {
+      &__block {
+        &List {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .content {
+    &Line {
+      display: none;
+    }
+
+    &Header {
+      row-gap: 47px;
+      margin-bottom: 60px;
+
+      &__title {
+        font-size: 24px;
+      }
+
+      &__search {
+        flex-direction: column;
+        row-gap: 16px;
+        background-color: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+
+        &Input {
+          border-radius: 10px;
+          height: 65px;
+          padding: 20px 15px;
+
+          font-size: 22px;
+        }
+
+        &Btn {
+          border-radius: 10px;
+          background-color: #964b00;
+          height: 65px;
+          padding: 0;
+
+          font-size: 22px;
+        }
+      }
+    }
+
+    &Advantages {
+      row-gap: 35px;
+      margin-bottom: 75px;
+
+      &__title {
+        font-size: 24px;
+      }
+    }
+
+    &Tours {
+      row-gap: 75px;
+      margin-bottom: 75px;
+
+      &__block {
+        row-gap: 50px;
+
+        &Title {
+          font-size: 24px;
+        }
+      }
+    }
+
+    &Steps {
+      row-gap: 45px;
+      margin-bottom: 90px;
+
+      &__title {
+        font-size: 24px;
+      }
+
+      &__list {
+        flex-direction: column;
+        row-gap: 30px;
+
+        &Item {
+          row-gap: 15px;
+          width: 100%;
+
+          &__number {
+            width: 50px;
+            height: 50px;
+
+            font-size: 24px;
+          }
+
+          &__text {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    &Region {
+      display: flex;
+      flex-direction: row;
+      column-gap: 35px;
+      justify-content: space-between;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background-color: #964b00;
+        border-radius: 30px;
+        width: 174px;
+        height: 232px;
+        padding: 10px;
+
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    &Advantages {
+      &__list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &Tours {
+      &__block {
+        &List {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
+}
