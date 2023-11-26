@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import styles from './Register.module.scss';
 
 export const Register = ({ setRegisterOpen }) => {

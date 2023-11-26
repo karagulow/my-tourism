@@ -9,6 +9,7 @@ import { TouristMenu } from '../TouristMenu';
 import { UserMenu } from '../UserMenu';
 import { Login } from '../Login';
 import { Register } from '../Register';
+import { AuthorsTour } from '../AuthorsTour';
 
 export const Header = () => {
   const [isTouristAuth, setIsTouristAuth] = useState(false);
@@ -19,12 +20,17 @@ export const Header = () => {
   const [loginOpen, setLoginOpen] = useState(false);
   const [registerOpen, setRegisterOpen] = useState(false);
 
-  menuOpen || loginOpen || registerOpen
+  const [authorsTourOpen, setAuthorsTourOpen] = useState(false);
+
+  menuOpen || loginOpen || registerOpen || authorsTourOpen
     ? (document.body.style.overflow = 'hidden')
     : (document.body.style.overflow = 'auto');
 
   return (
     <header>
+      {authorsTourOpen && (
+        <AuthorsTour setAuthorsTourOpen={setAuthorsTourOpen} />
+      )}
       <nav className={`${styles.nav} ${styles.fixedNavBar}`}>
         <div className="container">
           <div className={styles.navRow}>
@@ -50,11 +56,20 @@ export const Header = () => {
                       />
                     </svg>
                     {isTouristAuth ? (
-                      <TouristMenu />
+                      <TouristMenu
+                        setAuthorsTourOpen={setAuthorsTourOpen}
+                        setMenuOpen={setMenuOpen}
+                      />
                     ) : isGuideAuth ? (
-                      <GuideMenu />
+                      <GuideMenu
+                        setAuthorsTourOpen={setAuthorsTourOpen}
+                        setMenuOpen={setMenuOpen}
+                      />
                     ) : (
-                      <UserMenu />
+                      <UserMenu
+                        setAuthorsTourOpen={setAuthorsTourOpen}
+                        setMenuOpen={setMenuOpen}
+                      />
                     )}
                   </>
                 ) : (
@@ -84,7 +99,12 @@ export const Header = () => {
                 <button className={styles.navRow__rightBtns__item}>
                   Подобрать тур
                 </button>
-                <button className={styles.navRow__rightBtns__item}>
+                <button
+                  className={styles.navRow__rightBtns__item}
+                  onClick={() => {
+                    setAuthorsTourOpen(true);
+                  }}
+                >
                   Что это такое
                 </button>
               </div>

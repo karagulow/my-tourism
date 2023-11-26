@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import styles from './TouristMenu.module.scss';
 
-export const TouristMenu = () => {
+export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
   return (
     <div className={styles.menu}>
       <ul className={styles.menuList}>
@@ -42,7 +42,15 @@ export const TouristMenu = () => {
       </ul>
       <ul className={styles.menuList}>
         <li className={styles.menuList__item}>Подобрать тур</li>
-        <li className={styles.menuList__item}>Что это такое</li>
+        <li
+          className={styles.menuList__item}
+          onClick={() => {
+            setAuthorsTourOpen(true);
+            setMenuOpen(false);
+          }}
+        >
+          Что это такое
+        </li>
       </ul>
     </div>
   );

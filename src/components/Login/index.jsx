@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import styles from './Login.module.scss';
 
 export const Login = ({ setLoginOpen, setRegisterOpen }) => {
