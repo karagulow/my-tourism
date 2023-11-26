@@ -7,6 +7,7 @@ import userAvatar from '../../assets/img/user-avatar-null.svg';
 import { GuideMenu } from '../GuideMenu';
 import { TouristMenu } from '../TouristMenu';
 import { UserMenu } from '../UserMenu';
+import { Login } from '../Login';
 
 export const Header = () => {
   const [isTouristAuth, setIsTouristAuth] = useState(false);
@@ -14,7 +15,9 @@ export const Header = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
-  menuOpen
+  const [loginOpen, setLoginOpen] = useState(false);
+
+  menuOpen || loginOpen
     ? (document.body.style.overflow = 'hidden')
     : (document.body.style.overflow = 'auto');
 
@@ -132,7 +135,17 @@ export const Header = () => {
                   <img src={userAvatar} alt="avatar" />
                 </button>
               ) : (
-                <button className={styles.navRow__rightBtn}>Вход</button>
+                <>
+                  <button
+                    className={styles.navRow__rightBtn}
+                    onClick={() => {
+                      setLoginOpen(true);
+                    }}
+                  >
+                    Вход
+                  </button>
+                  {loginOpen && <Login setLoginOpen={setLoginOpen} />}
+                </>
               )}
             </div>
           </div>
