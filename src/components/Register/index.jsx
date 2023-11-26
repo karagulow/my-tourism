@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 
-import styles from './Login.module.scss';
+import styles from './Register.module.scss';
 
-export const Login = ({ setLoginOpen, setRegisterOpen }) => {
+export const Register = ({ setRegisterOpen }) => {
   return (
     <div className={styles.login}>
       <div
         className={styles.loginClose}
         onClick={() => {
-          setLoginOpen(false);
+          setRegisterOpen(false);
         }}
       >
         <svg
@@ -25,8 +25,23 @@ export const Login = ({ setLoginOpen, setRegisterOpen }) => {
         </svg>
       </div>
       <div className={styles.loginBlock}>
-        <h2 className={styles.loginBlock__title}>Авторизация</h2>
+        <h2 className={styles.loginBlock__title}>Регистрация</h2>
         <form className={styles.loginBlock__form}>
+          <input
+            className={styles.loginBlock__formInput}
+            type="text"
+            placeholder="ФИО"
+          />
+          <input
+            className={styles.loginBlock__formInput}
+            type="text"
+            placeholder="Номер телефона"
+          />
+          <input
+            className={styles.loginBlock__formInput}
+            type="text"
+            placeholder="Электронная почта"
+          />
           <input
             className={styles.loginBlock__formInput}
             type="text"
@@ -39,17 +54,6 @@ export const Login = ({ setLoginOpen, setRegisterOpen }) => {
           />
           <button className={styles.loginBlock__formBtn}>Авторизоваться</button>
         </form>
-        <p className={styles.loginBlock__text}>
-          Нет аккаунта?{' '}
-          <div
-            onClick={() => {
-              setRegisterOpen(true);
-              setLoginOpen(false);
-            }}
-          >
-            Зарегистрироваться
-          </div>
-        </p>
       </div>
     </div>
   );

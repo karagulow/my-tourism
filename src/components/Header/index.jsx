@@ -8,6 +8,7 @@ import { GuideMenu } from '../GuideMenu';
 import { TouristMenu } from '../TouristMenu';
 import { UserMenu } from '../UserMenu';
 import { Login } from '../Login';
+import { Register } from '../Register';
 
 export const Header = () => {
   const [isTouristAuth, setIsTouristAuth] = useState(false);
@@ -16,8 +17,9 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const [loginOpen, setLoginOpen] = useState(false);
+  const [registerOpen, setRegisterOpen] = useState(false);
 
-  menuOpen || loginOpen
+  menuOpen || loginOpen || registerOpen
     ? (document.body.style.overflow = 'hidden')
     : (document.body.style.overflow = 'auto');
 
@@ -144,7 +146,15 @@ export const Header = () => {
                   >
                     Вход
                   </button>
-                  {loginOpen && <Login setLoginOpen={setLoginOpen} />}
+                  {loginOpen && (
+                    <Login
+                      setLoginOpen={setLoginOpen}
+                      setRegisterOpen={setRegisterOpen}
+                    />
+                  )}
+                  {registerOpen && (
+                    <Register setRegisterOpen={setRegisterOpen} />
+                  )}
                 </>
               )}
             </div>
