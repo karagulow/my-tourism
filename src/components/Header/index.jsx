@@ -12,7 +12,7 @@ import { Register } from '../Register';
 import { AuthorsTour } from '../AuthorsTour';
 
 export const Header = () => {
-  const [isTouristAuth, setIsTouristAuth] = useState(false);
+  const [isTouristAuth, setIsTouristAuth] = useState(true);
   const [isGuideAuth, setIsGuideAuth] = useState(false);
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -90,7 +90,13 @@ export const Header = () => {
                   </svg>
                 )}
               </div>
-              <Link to="/" className={styles.navRow__leftLogo}>
+              <Link
+                to="/"
+                className={styles.navRow__leftLogo}
+                onClick={() => {
+                  setMenuOpen(false);
+                }}
+              >
                 Мой туризм
               </Link>
             </div>

@@ -7,10 +7,22 @@ export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
     <div className={styles.menu}>
       <ul className={styles.menuList}>
         <li className={styles.menuList__item}>
-          <Link>О нас</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            О нас
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Помощь</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            Помощь
+          </Link>
         </li>
       </ul>
       <ul className={styles.menuList}>
@@ -19,25 +31,69 @@ export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
       </ul>
       <ul className={styles.menuList}>
         <li className={styles.menuList__item}>
-          <Link>Чат</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            Чат
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Мои бронирования</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            Мои бронирования
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Мои отзывы</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            Мои отзывы
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Личный кабинет</Link>
+          <Link
+            to="/lk/tourist/id"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            Личный кабинет
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Персональная информация</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            Персональная информация
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Урегулирование</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            Урегулирование
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Бонусная программа</Link>
+          <Link
+            to="/lk/tourist/bonus"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            Бонусная программа
+          </Link>
         </li>
       </ul>
       <ul className={styles.menuList}>
