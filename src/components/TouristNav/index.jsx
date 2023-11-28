@@ -7,7 +7,7 @@ const setActive = ({ isActive }) => (isActive ? styles.tourist_navActive : '');
 export const TouristNav = () => {
   return (
     <div className={styles.tourist_nav}>
-      <NavLink className={setActive} to="/">
+      <NavLink className={setActive} to="/lk/tourist/chat">
         Чат
       </NavLink>
       <NavLink className={setActive} to="/lk/tourist/booking">
@@ -22,7 +22,7 @@ export const TouristNav = () => {
       <NavLink className={setActive} to="/">
         Персональная информация
       </NavLink>
-      <NavLink className={setActive} to="/lk/tourist/id">
+      <NavLink className={setActive} to="/lk/tourist/regulation">
         Урегулирование
       </NavLink>
       <NavLink className={setActive} to="/lk/tourist/bonus">
