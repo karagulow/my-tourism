@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { TouristPage } from './pages/TouristPage';
 import { TouristBonus } from './pages/TouristBonus';
 import { TouristBooking } from './pages/TouristBooking';
+import { TouristReviews } from './pages/TouristReviews';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="id" element={<TouristPage />} />
           <Route path="bonus" element={<TouristBonus />} />
           <Route path="booking" element={<TouristBooking />} />
+          <Route path="reviews" element={<TouristReviews />} />
         </Route>
       </Route>
     </Routes>

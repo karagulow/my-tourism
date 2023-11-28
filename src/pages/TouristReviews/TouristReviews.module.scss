@@ -1,0 +1,28 @@
+@import '../../assets/scss/main.scss';
+
+.tourist_reviews {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+
+  &Block {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      color: #1a1a1a;
+      font-size: 32px;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .tourist_reviews {
+    &Block {
+      &__title {
+        font-size: 24px;
+      }
+    }
+  }
+}

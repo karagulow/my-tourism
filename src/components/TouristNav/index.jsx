@@ -13,7 +13,7 @@ export const TouristNav = () => {
       <NavLink className={setActive} to="/lk/tourist/booking">
         Мои бронирования
       </NavLink>
-      <NavLink className={setActive} to="/">
+      <NavLink className={setActive} to="/lk/tourist/reviews">
         Мои отзывы
       </NavLink>
       <NavLink className={setActive} to="/lk/tourist/id">
