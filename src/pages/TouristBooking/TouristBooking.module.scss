@@ -1,0 +1,40 @@
+@import '../../assets/scss/main.scss';
+
+.tourist_booking {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+
+  &Block {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      color: #1a1a1a;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    &__text {
+      color: #1a1a1a;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .tourist_booking {
+    &Block {
+      &__title {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      &__text {
+        font-size: 14px;
+      }
+    }
+  }
+}
