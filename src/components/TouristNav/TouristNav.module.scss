@@ -5,6 +5,7 @@
   flex-direction: column;
   row-gap: 13px;
   max-width: 280px;
+  min-width: 280px;
 
   a {
     padding: 15px;
@@ -19,5 +20,11 @@
   &Active {
     background-color: #964b00;
     color: #fff !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .tourist_nav {
+    display: none;
   }
 }
