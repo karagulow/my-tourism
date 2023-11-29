@@ -10,6 +10,7 @@ export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
           <Link
             onClick={() => {
               setMenuOpen(false);
+              window.scrollTo(0, 0);
             }}
           >
             О нас
@@ -19,6 +20,7 @@ export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
           <Link
             onClick={() => {
               setMenuOpen(false);
+              window.scrollTo(0, 0);
             }}
           >
             Помощь
@@ -35,6 +37,7 @@ export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
             to="/lk/tourist/chat"
             onClick={() => {
               setMenuOpen(false);
+              window.scrollTo(0, 0);
             }}
           >
             Чат
@@ -45,6 +48,7 @@ export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
             to="/lk/tourist/booking"
             onClick={() => {
               setMenuOpen(false);
+              window.scrollTo(0, 0);
             }}
           >
             Мои бронирования
@@ -55,6 +59,7 @@ export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
             to="/lk/tourist/reviews"
             onClick={() => {
               setMenuOpen(false);
+              window.scrollTo(0, 0);
             }}
           >
             Мои отзывы
@@ -65,6 +70,7 @@ export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
             to="/lk/tourist/id"
             onClick={() => {
               setMenuOpen(false);
+              window.scrollTo(0, 0);
             }}
           >
             Личный кабинет
@@ -75,6 +81,7 @@ export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
             to="/lk/tourist/personal"
             onClick={() => {
               setMenuOpen(false);
+              window.scrollTo(0, 0);
             }}
           >
             Персональная информация
@@ -85,6 +92,7 @@ export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
             to="/lk/tourist/regulation"
             onClick={() => {
               setMenuOpen(false);
+              window.scrollTo(0, 0);
             }}
           >
             Урегулирование
@@ -95,6 +103,7 @@ export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
             to="/lk/tourist/bonus"
             onClick={() => {
               setMenuOpen(false);
+              window.scrollTo(0, 0);
             }}
           >
             Бонусная программа

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import styles from './GuideMenu.module.scss';
 
-export const GuideMenu = () => {
+export const GuideMenu = ({ setMenuOpen }) => {
   return (
     <div className={styles.menu}>
       <ul className={styles.menuList}>
@@ -19,49 +19,155 @@ export const GuideMenu = () => {
       </ul>
       <ul className={styles.menuList}>
         <li className={styles.menuList__item}>
-          <Link>Главная страница</Link>
+          <Link
+            to="/lk/guide/id"
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Главная страница
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Мой профиль</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Мой профиль
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Моя команда</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Моя команда
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Настройка оповещений</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Настройка оповещений
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Центр уведомлений</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Центр уведомлений
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Мои туры</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Мои туры
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Заявки на бронирование</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Заявки на бронирование
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Оплаты</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Оплаты
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Путешественники</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Путешественники
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Урегулирование</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Урегулирование
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Мои отзывы</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Мои отзывы
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Бонусный счет</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Бонусный счет
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Реквизиты и счета</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Реквизиты и счета
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Запросы на проверку туров</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Запросы на проверку туров
+          </Link>
         </li>
         <li className={styles.menuList__item}>
-          <Link>Поддержка</Link>
+          <Link
+            onClick={() => {
+              setMenuOpen(false);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Поддержка
+          </Link>
         </li>
       </ul>
 
