@@ -9,6 +9,7 @@ import { TouristBooking } from './pages/TouristBooking';
 import { TouristReviews } from './pages/TouristReviews';
 import { TouristRegulation } from './pages/TouristRegulation';
 import { TouristChat } from './pages/TouristChat';
+import { TouristInfo } from './pages/TouristInfo';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="reviews" element={<TouristReviews />} />
           <Route path="regulation" element={<TouristRegulation />} />
           <Route path="chat" element={<TouristChat />} />
+          <Route path="personal" element={<TouristInfo />} />
         </Route>
       </Route>
     </Routes>

@@ -19,7 +19,7 @@ export const TouristNav = () => {
       <NavLink className={setActive} to="/lk/tourist/id">
         Личный кабинет
       </NavLink>
-      <NavLink className={setActive} to="/">
+      <NavLink className={setActive} to="/lk/tourist/personal">
         Персональная информация
       </NavLink>
       <NavLink className={setActive} to="/lk/tourist/regulation">

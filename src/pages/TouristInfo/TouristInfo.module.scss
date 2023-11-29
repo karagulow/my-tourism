@@ -1,0 +1,211 @@
+@import '../../assets/scss/main.scss';
+
+.personal {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+
+  &Block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__title {
+      color: #1a1a1a;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 45px;
+      margin-bottom: 55px;
+      padding: 21px 38px 40px;
+
+      border-radius: 8px;
+      background: #fdfdfd;
+      box-shadow: 0px 10px 19px -5px rgba(0, 0, 0, 0.25);
+
+      &Title {
+        color: #1a1a1a;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      &Grid {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-row-gap: 28px;
+        grid-column-gap: 10px;
+
+        &__name {
+          color: #1a1a1a;
+          font-size: 18px;
+          font-weight: 400;
+        }
+
+        &__add {
+          display: flex;
+          justify-content: center;
+          width: 73px;
+          height: 73px;
+
+          border: 1px solid #964b00;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+
+        &__input {
+          width: 264px;
+          height: 24px;
+          border: 1px solid #964b00;
+          border-radius: 8px;
+          padding-left: 5px;
+
+          font-size: 14px;
+        }
+
+        &__date {
+          display: flex;
+          flex-direction: row;
+          column-gap: 5px;
+
+          &Input {
+            width: 73px;
+            height: 24px;
+            border: 1px solid #964b00;
+            border-radius: 8px;
+            padding-left: 5px;
+            font-size: 14px;
+          }
+        }
+
+        &__other {
+          display: flex;
+          flex-direction: column;
+          row-gap: 28px;
+
+          &Btn {
+            background-color: #964b00;
+            border-radius: 8px;
+            width: 264px;
+            height: 24px;
+
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+          }
+
+          &Push {
+            display: flex;
+            flex-direction: row;
+            column-gap: 15px;
+            align-items: center;
+
+            &__square {
+              border: 1px solid #964b00;
+              border-radius: 4px;
+              width: 16px;
+              height: 16px;
+              cursor: pointer;
+            }
+
+            &__text {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    &__btn {
+      border-radius: 8px;
+      background-color: #964b00;
+      box-shadow: 0px 10px 19px -5px rgba(0, 0, 0, 0.25);
+      height: 35px;
+
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .personal {
+    &Block {
+      &__content {
+        &Grid {
+          grid-template-columns: 1fr 2fr;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .personal {
+    &Block {
+      &__content {
+        &Grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .personal {
+    &Block {
+      &__content {
+        &Grid {
+          grid-template-columns: 1fr;
+          grid-row-gap: 15px;
+
+          &__input {
+            width: 100%;
+          }
+
+          &__date {
+            column-gap: 35px;
+
+            &Input {
+              width: 100%;
+            }
+          }
+
+          &__other {
+            &Btn {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .personal {
+    &Block {
+      &__title {
+        font-size: 24px;
+      }
+
+      &__content {
+        &Title {
+          font-size: 18px;
+        }
+
+        &Grid {
+          &__name {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

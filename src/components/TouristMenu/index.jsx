@@ -72,6 +72,7 @@ export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
         </li>
         <li className={styles.menuList__item}>
           <Link
+            to="/lk/tourist/personal"
             onClick={() => {
               setMenuOpen(false);
             }}

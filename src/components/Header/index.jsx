@@ -26,6 +26,12 @@ export const Header = () => {
     ? (document.body.style.overflow = 'hidden')
     : (document.body.style.overflow = 'auto');
 
+  const accountLink = isGuideAuth
+    ? '/lk/guide/id'
+    : isTouristAuth
+    ? '/lk/tourist/id'
+    : '';
+
   return (
     <header>
       {authorsTourOpen && (
@@ -159,9 +165,9 @@ export const Header = () => {
                 </li>
               </ul>
               {isGuideAuth || isTouristAuth ? (
-                <button to="#" className={styles.navRow__rightAvatar}>
+                <Link to={accountLink} className={styles.navRow__rightAvatar}>
                   <img src={userAvatar} alt="avatar" />
-                </button>
+                </Link>
               ) : (
                 <>
                   <button
