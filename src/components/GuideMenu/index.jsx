@@ -64,6 +64,8 @@ export const GuideMenu = () => {
           <Link>Поддержка</Link>
         </li>
       </ul>
+
+      <button className={styles.menuBtn}>Создать новый тур</button>
     </div>
   );
 };

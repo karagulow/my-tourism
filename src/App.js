@@ -10,6 +10,7 @@ import { TouristReviews } from './pages/TouristReviews';
 import { TouristRegulation } from './pages/TouristRegulation';
 import { TouristChat } from './pages/TouristChat';
 import { TouristInfo } from './pages/TouristInfo';
+import { GuidePage } from './pages/GuidePage';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
           <Route path="regulation" element={<TouristRegulation />} />
           <Route path="chat" element={<TouristChat />} />
           <Route path="personal" element={<TouristInfo />} />
+        </Route>
+        <Route path="lk/guide/">
+          <Route path="id" element={<GuidePage />} />
         </Route>
       </Route>
     </Routes>

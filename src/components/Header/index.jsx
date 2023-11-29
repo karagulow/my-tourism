@@ -12,8 +12,8 @@ import { Register } from '../Register';
 import { AuthorsTour } from '../AuthorsTour';
 
 export const Header = () => {
-  const [isTouristAuth, setIsTouristAuth] = useState(true);
-  const [isGuideAuth, setIsGuideAuth] = useState(false);
+  const [isTouristAuth, setIsTouristAuth] = useState(false);
+  const [isGuideAuth, setIsGuideAuth] = useState(true);
 
   const [menuOpen, setMenuOpen] = useState(false);
 
