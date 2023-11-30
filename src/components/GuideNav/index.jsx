@@ -16,7 +16,7 @@ export const GuideNav = () => {
       <NavLink className={setActive} to="/lk/guide/team">
         Моя команда
       </NavLink>
-      <NavLink className={setActive} to="/">
+      <NavLink className={setActive} to="/lk/guide/notifications-settings">
         Настройка оповещений
       </NavLink>
       <NavLink className={setActive} to="/lk/guide/notifications">

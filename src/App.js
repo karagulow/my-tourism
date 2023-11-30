@@ -14,6 +14,7 @@ import { GuidePage } from './pages/GuidePage';
 import { GuideProfile } from './pages/GuideProfile';
 import { GuideTeam } from './pages/GuideTeam';
 import { GuideNotifications } from './pages/GuideNotifications';
+import { GuideNotificationsSettings } from './pages/GuideNotificationsSettings';
 
 function App() {
   return (
@@ -34,6 +35,10 @@ function App() {
           <Route path="profile" element={<GuideProfile />} />
           <Route path="team" element={<GuideTeam />} />
           <Route path="notifications" element={<GuideNotifications />} />
+          <Route
+            path="notifications-settings"
+            element={<GuideNotificationsSettings />}
+          />
         </Route>
       </Route>
     </Routes>

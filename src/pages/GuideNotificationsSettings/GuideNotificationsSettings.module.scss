@@ -1,0 +1,137 @@
+@import '../../assets/scss/main.scss';
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+
+  &Block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__title {
+      color: #1a1a1a;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    &__name {
+      color: #1a1a1a;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      color: #626262;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 45px;
+      margin: 70px 0;
+
+      &Item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &__text {
+          width: 35%;
+        }
+
+        &__btns {
+          display: flex;
+          flex-direction: row;
+          column-gap: 10px;
+
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+
+    &__btn {
+      border-radius: 8px;
+      background: #964b00;
+      box-shadow: 0px 10px 19px -5px rgba(0, 0, 0, 0.25);
+      max-width: 733px;
+      height: 42px;
+      margin-bottom: 36px;
+
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .settings {
+    &Block {
+      &__list {
+        &Item {
+          &__text {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .settings {
+    &Block {
+      &__title {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      &__name {
+        font-size: 18px;
+      }
+
+      &__text {
+        font-size: 12px;
+      }
+
+      &__list {
+        row-gap: 30px;
+        margin: 30px 0;
+
+        &Item {
+          justify-content: space-between;
+
+          &__text {
+            font-size: 14px;
+            width: auto;
+          }
+
+          &__btns {
+            column-gap: 5px;
+
+            svg {
+              width: 18px;
+              height: 18px;
+            }
+          }
+        }
+      }
+
+      &__btn {
+        max-width: 100%;
+        height: 28px;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+    }
+  }
+}
