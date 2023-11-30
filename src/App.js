@@ -13,6 +13,7 @@ import { TouristInfo } from './pages/TouristInfo';
 import { GuidePage } from './pages/GuidePage';
 import { GuideProfile } from './pages/GuideProfile';
 import { GuideTeam } from './pages/GuideTeam';
+import { GuideNotifications } from './pages/GuideNotifications';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="id" element={<GuidePage />} />
           <Route path="profile" element={<GuideProfile />} />
           <Route path="team" element={<GuideTeam />} />
+          <Route path="notifications" element={<GuideNotifications />} />
         </Route>
       </Route>
     </Routes>
