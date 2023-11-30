@@ -10,7 +10,7 @@ export const GuideNav = () => {
       <NavLink className={setActive} to="/lk/guide/id">
         Главная страница
       </NavLink>
-      <NavLink className={setActive} to="/">
+      <NavLink className={setActive} to="/lk/guide/profile">
         Мой профиль
       </NavLink>
       <NavLink className={setActive} to="/">

@@ -11,6 +11,7 @@ import { TouristRegulation } from './pages/TouristRegulation';
 import { TouristChat } from './pages/TouristChat';
 import { TouristInfo } from './pages/TouristInfo';
 import { GuidePage } from './pages/GuidePage';
+import { GuideProfile } from './pages/GuideProfile';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         </Route>
         <Route path="lk/guide/">
           <Route path="id" element={<GuidePage />} />
+          <Route path="profile" element={<GuideProfile />} />
         </Route>
       </Route>
     </Routes>
