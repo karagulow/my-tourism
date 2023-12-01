@@ -46,7 +46,7 @@ export const GuideNav = () => {
       <NavLink className={setActive} to="/">
         Реквизиты и счета
       </NavLink>
-      <NavLink className={setActive} to="/">
+      <NavLink className={setActive} to="/lk/guide/request">
         Запросы на проверку туров
       </NavLink>
       <Link className={styles.guide_navBtn}>Создать новый тур</Link>

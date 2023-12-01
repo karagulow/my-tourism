@@ -20,6 +20,7 @@ import { GuideBooking } from './pages/GuideBooking';
 import { GuidePayments } from './pages/GuidePayments';
 import { GuideTravelers } from './pages/GuideTravelers';
 import { GuideRegulation } from './pages/GuideRegulation';
+import { GuideRequest } from './pages/GuideRequest';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
           <Route path="payments" element={<GuidePayments />} />
           <Route path="travelers" element={<GuideTravelers />} />
           <Route path="regulation" element={<GuideRegulation />} />
+          <Route path="request" element={<GuideRequest />} />
         </Route>
       </Route>
     </Routes>
