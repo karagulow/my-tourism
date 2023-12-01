@@ -31,7 +31,7 @@ export const GuideNav = () => {
       <NavLink className={setActive} to="/lk/guide/payments">
         Оплаты
       </NavLink>
-      <NavLink className={setActive} to="/">
+      <NavLink className={setActive} to="/lk/guide/travelers">
         Путешественники
       </NavLink>
       <NavLink className={setActive} to="/">
