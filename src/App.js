@@ -15,6 +15,7 @@ import { GuideProfile } from './pages/GuideProfile';
 import { GuideTeam } from './pages/GuideTeam';
 import { GuideNotifications } from './pages/GuideNotifications';
 import { GuideNotificationsSettings } from './pages/GuideNotificationsSettings';
+import { GuideTours } from './pages/GuideTours';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             path="notifications-settings"
             element={<GuideNotificationsSettings />}
           />
+          <Route path="tours" element={<GuideTours />} />
         </Route>
       </Route>
     </Routes>

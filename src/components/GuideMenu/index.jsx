@@ -75,6 +75,7 @@ export const GuideMenu = ({ setMenuOpen }) => {
         </li>
         <li className={styles.menuList__item}>
           <Link
+            to="/lk/guide/tours"
             onClick={() => {
               setMenuOpen(false);
               window.scrollTo(0, 0);
