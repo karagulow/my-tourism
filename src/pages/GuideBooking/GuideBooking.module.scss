@@ -1,0 +1,84 @@
+@import '../../assets/scss/main.scss';
+
+.booking {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+
+  &Block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      column-gap: 10px;
+      row-gap: 10px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+
+      &Item {
+        border-radius: 8px;
+        border: 1px solid #964b00;
+
+        padding: 10px 20px;
+        color: #1a1a1a;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+
+    &__table {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      &Item {
+        color: #1a1a1a;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+
+    &__line {
+      border-bottom: 1px solid #964b00;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .booking {
+    &Block {
+      &__table {
+        flex-direction: column;
+        row-gap: 33px;
+
+        &Item {
+          border-bottom: 1px solid #964b00;
+          padding-bottom: 50px;
+        }
+      }
+
+      &__line {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .booking {
+    &Block {
+      &__list {
+        margin-bottom: 40px;
+
+        &Item {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
