@@ -40,7 +40,7 @@ export const GuideNav = () => {
       <NavLink className={setActive} to="/lk/guide/reviews">
         Мои отзывы
       </NavLink>
-      <NavLink className={setActive} to="/">
+      <NavLink className={setActive} to="/lk/guide/history">
         Бонусный счет
       </NavLink>
       <NavLink className={setActive} to="/">
