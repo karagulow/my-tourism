@@ -1,5 +1,6 @@
-import { GuideNav } from '../../components/GuideNav';
 import styles from './GuideBooking.module.scss';
+
+import { GuideNav } from '../../components/GuideNav';
 
 export const GuideBooking = () => {
   return (
