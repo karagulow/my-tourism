@@ -2,7 +2,11 @@ import { Link } from 'react-router-dom';
 
 import styles from './TouristMenu.module.scss';
 
-export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
+export const TouristMenu = ({
+  setSelectionTourOpen,
+  setAuthorsTourOpen,
+  setMenuOpen,
+}) => {
   return (
     <div className={styles.menu}>
       <ul className={styles.menuList}>
@@ -111,7 +115,15 @@ export const TouristMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
         </li>
       </ul>
       <ul className={styles.menuList}>
-        <li className={styles.menuList__item}>Подобрать тур</li>
+        <li
+          className={styles.menuList__item}
+          onClick={() => {
+            setSelectionTourOpen(true);
+            setMenuOpen(false);
+          }}
+        >
+          Подобрать тур
+        </li>
         <li
           className={styles.menuList__item}
           onClick={() => {

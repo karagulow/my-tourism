@@ -10,19 +10,21 @@ import { UserMenu } from '../UserMenu';
 import { Login } from '../Login';
 import { Register } from '../Register';
 import { AuthorsTour } from '../AuthorsTour';
+import { SelectionTour } from '../SelectionTour';
 
 export const Header = () => {
   const [isTouristAuth, setIsTouristAuth] = useState(false);
-  const [isGuideAuth, setIsGuideAuth] = useState(true);
+  const [isGuideAuth, setIsGuideAuth] = useState(false);
 
   const [menuOpen, setMenuOpen] = useState(false);
 
   const [loginOpen, setLoginOpen] = useState(false);
   const [registerOpen, setRegisterOpen] = useState(false);
 
+  const [selectionTourOpen, setSelectionTourOpen] = useState(false);
   const [authorsTourOpen, setAuthorsTourOpen] = useState(false);
 
-  menuOpen || loginOpen || registerOpen || authorsTourOpen
+  menuOpen || loginOpen || registerOpen || authorsTourOpen || selectionTourOpen
     ? (document.body.style.overflow = 'hidden')
     : (document.body.style.overflow = 'auto');
 
@@ -34,6 +36,9 @@ export const Header = () => {
 
   return (
     <header>
+      {selectionTourOpen && (
+        <SelectionTour setSelectionTourOpen={setSelectionTourOpen} />
+      )}
       {authorsTourOpen && (
         <AuthorsTour setAuthorsTourOpen={setAuthorsTourOpen} />
       )}
@@ -63,6 +68,7 @@ export const Header = () => {
                     </svg>
                     {isTouristAuth ? (
                       <TouristMenu
+                        setSelectionTourOpen={setSelectionTourOpen}
                         setAuthorsTourOpen={setAuthorsTourOpen}
                         setMenuOpen={setMenuOpen}
                       />
@@ -73,6 +79,7 @@ export const Header = () => {
                       />
                     ) : (
                       <UserMenu
+                        setSelectionTourOpen={setSelectionTourOpen}
                         setAuthorsTourOpen={setAuthorsTourOpen}
                         setMenuOpen={setMenuOpen}
                       />
@@ -108,7 +115,12 @@ export const Header = () => {
             </div>
             <div className={styles.navRow__right}>
               <div className={styles.navRow__rightBtns}>
-                <button className={styles.navRow__rightBtns__item}>
+                <button
+                  className={styles.navRow__rightBtns__item}
+                  onClick={() => {
+                    setSelectionTourOpen(true);
+                  }}
+                >
                   Подобрать тур
                 </button>
                 <button

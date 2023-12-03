@@ -2,7 +2,11 @@ import { Link } from 'react-router-dom';
 
 import styles from './UserMenu.module.scss';
 
-export const UserMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
+export const UserMenu = ({
+  setSelectionTourOpen,
+  setAuthorsTourOpen,
+  setMenuOpen,
+}) => {
   return (
     <div className={styles.menu}>
       <ul className={styles.menuList}>
@@ -18,7 +22,15 @@ export const UserMenu = ({ setAuthorsTourOpen, setMenuOpen }) => {
         <li className={styles.menuList__item}>Рус</li>
       </ul>
       <ul className={styles.menuList}>
-        <li className={styles.menuList__item}>Подобрать тур</li>
+        <li
+          className={styles.menuList__item}
+          onClick={() => {
+            setSelectionTourOpen(true);
+            setMenuOpen(false);
+          }}
+        >
+          Подобрать тур
+        </li>
         <li
           className={styles.menuList__item}
           onClick={() => {

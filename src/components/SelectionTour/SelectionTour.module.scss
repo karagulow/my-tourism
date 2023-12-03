@@ -1,0 +1,290 @@
+@import '../../assets/scss/main.scss';
+
+.selection_tour {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+  padding-top: 30px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 11;
+  overflow-y: hidden;
+
+  &Close {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+  }
+
+  &Block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #fff;
+    width: auto;
+    height: 90%;
+    padding: 30px 40px;
+    overflow-y: auto;
+
+    &__title {
+      color: #1a1a1a;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 700;
+      margin: 0 auto;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: row;
+      column-gap: 160px;
+
+      &Item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 550px;
+
+        &__wide {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 540px;
+
+          &Text {
+            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: 700;
+          }
+
+          &Params {
+            display: flex;
+            flex-direction: column;
+            width: 380px;
+
+            &__btn {
+              border-radius: 10px;
+              background: #964b00;
+              height: 35px;
+              cursor: pointer;
+            }
+
+            &__btns {
+              display: flex;
+              flex-direction: row;
+              column-gap: 24px;
+              margin-bottom: 24px;
+
+              &Item {
+                border-radius: 10px;
+                background: #964b00;
+                width: 100%;
+                height: 35px;
+
+                color: #fff;
+                font-size: 20px;
+                font-weight: 700;
+              }
+            }
+
+            &__circles {
+              position: relative;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-bottom: 5px;
+              cursor: pointer;
+
+              &Item {
+                width: 13px;
+                height: 13px;
+                background-color: #964b00;
+                border-radius: 50%;
+              }
+
+              &Line {
+                position: absolute;
+                border-bottom: 1px solid #964b00;
+                top: 6px;
+                left: 2px;
+                width: 99%;
+              }
+            }
+
+            &__numbers {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+
+              &Item {
+                color: #1a1a1a;
+                font-size: 18px;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+
+        &__short {
+          display: flex;
+          flex-direction: row;
+          column-gap: 40px;
+
+          &Text {
+            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: 700;
+            width: 225px;
+          }
+
+          &Big_btns {
+            display: flex;
+            flex-direction: row;
+            column-gap: 27px;
+
+            &__item {
+              width: 109px;
+              height: 35px;
+              border-radius: 10px;
+              background: #964b00;
+
+              color: #fff;
+              font-size: 20px;
+              font-weight: 700;
+            }
+          }
+
+          &Small_btns {
+            display: flex;
+            flex-direction: row;
+            column-gap: 7px;
+
+            &__item {
+              width: 43px;
+              height: 30px;
+              border-radius: 10px;
+              background: #964b00;
+
+              color: #fff;
+              font-size: 20px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+
+    &__btn {
+      margin: 0 auto;
+      border-radius: 15px;
+      background: #964b00;
+      width: 454px;
+      height: 54px;
+
+      color: #fff;
+      font-size: 28px;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .selection_tour {
+    &Block {
+      &__title {
+        margin-bottom: 50px;
+      }
+
+      &__content {
+        flex-direction: column;
+        row-gap: 50px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .selection_tour {
+    &Close {
+      width: 25px;
+      height: 25px;
+    }
+
+    &Block {
+      width: 90%;
+      height: 90%;
+      padding: 30px 20px;
+
+      &__title {
+        display: none;
+      }
+
+      &__content {
+        &Item {
+          row-gap: 40px;
+          height: auto;
+
+          &__wide {
+            flex-direction: column;
+            row-gap: 20px;
+            width: 100%;
+
+            &Params {
+              width: 100%;
+
+              &__btns {
+                &Item {
+                  font-size: 18px;
+                }
+              }
+
+              &__numbers {
+                &Item {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+
+          &__short {
+            flex-direction: column;
+            row-gap: 20px;
+
+            &Text {
+              width: auto;
+            }
+
+            &Big_btns {
+              column-gap: 22px;
+
+              &__item {
+                width: 100%;
+                font-size: 18px;
+              }
+            }
+
+            &Small_btns {
+              &__item {
+                width: 39px;
+                height: 27px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+
+      &__btn {
+        width: 100%;
+        font-size: 22px;
+      }
+    }
+  }
+}
