@@ -1,6 +1,9 @@
 import styles from './SelectionTour.module.scss';
 
-export const SelectionTour = ({ setSelectionTourOpen }) => {
+export const SelectionTour = ({
+  setSelectionTourOpen,
+  setSelectionTourRequestOpen,
+}) => {
   return (
     <div className={styles.selection_tour}>
       <div
@@ -512,7 +515,13 @@ export const SelectionTour = ({ setSelectionTourOpen }) => {
             </div>
           </div>
         </div>
-        <button className={styles.selection_tourBlock__btn}>
+        <button
+          className={styles.selection_tourBlock__btn}
+          onClick={() => {
+            setSelectionTourRequestOpen(true);
+            setSelectionTourOpen(false);
+          }}
+        >
           Показать результат
         </button>
       </div>

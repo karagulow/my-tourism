@@ -11,6 +11,7 @@ import { Login } from '../Login';
 import { Register } from '../Register';
 import { AuthorsTour } from '../AuthorsTour';
 import { SelectionTour } from '../SelectionTour';
+import { SelectionTourRequest } from '../SelectionTourRequest';
 
 export const Header = () => {
   const [isTouristAuth, setIsTouristAuth] = useState(false);
@@ -22,9 +23,16 @@ export const Header = () => {
   const [registerOpen, setRegisterOpen] = useState(false);
 
   const [selectionTourOpen, setSelectionTourOpen] = useState(false);
+  const [selectionTourRequestOpen, setSelectionTourRequestOpen] =
+    useState(false);
   const [authorsTourOpen, setAuthorsTourOpen] = useState(false);
 
-  menuOpen || loginOpen || registerOpen || authorsTourOpen || selectionTourOpen
+  menuOpen ||
+  loginOpen ||
+  registerOpen ||
+  authorsTourOpen ||
+  selectionTourOpen ||
+  selectionTourRequestOpen
     ? (document.body.style.overflow = 'hidden')
     : (document.body.style.overflow = 'auto');
 
@@ -37,7 +45,15 @@ export const Header = () => {
   return (
     <header>
       {selectionTourOpen && (
-        <SelectionTour setSelectionTourOpen={setSelectionTourOpen} />
+        <SelectionTour
+          setSelectionTourOpen={setSelectionTourOpen}
+          setSelectionTourRequestOpen={setSelectionTourRequestOpen}
+        />
+      )}
+      {selectionTourRequestOpen && (
+        <SelectionTourRequest
+          setSelectionTourRequestOpen={setSelectionTourRequestOpen}
+        />
       )}
       {authorsTourOpen && (
         <AuthorsTour setAuthorsTourOpen={setAuthorsTourOpen} />
