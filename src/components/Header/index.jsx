@@ -15,7 +15,7 @@ import { SelectionTourRequest } from '../SelectionTourRequest';
 
 export const Header = () => {
   const [isTouristAuth, setIsTouristAuth] = useState(false);
-  const [isGuideAuth, setIsGuideAuth] = useState(false);
+  const [isGuideAuth, setIsGuideAuth] = useState(true);
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -193,7 +193,13 @@ export const Header = () => {
                 </li>
               </ul>
               {isGuideAuth || isTouristAuth ? (
-                <Link to={accountLink} className={styles.navRow__rightAvatar}>
+                <Link
+                  to={accountLink}
+                  className={styles.navRow__rightAvatar}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
+                >
                   <img src={userAvatar} alt="avatar" />
                 </Link>
               ) : (

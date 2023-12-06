@@ -184,7 +184,9 @@ export const GuideMenu = ({ setMenuOpen }) => {
         </li>
       </ul>
 
-      <button className={styles.menuBtn}>Создать новый тур</button>
+      <Link to="/lk/guide/create-tour" className={styles.menuBtn}>
+        Создать новый тур
+      </Link>
     </div>
   );
 };
